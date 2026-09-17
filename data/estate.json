@@ -1,0 +1,144 @@
+{
+ "auctions": [
+  {
+   "address": "서울 강남구 역삼동 123-4",
+   "auction_id": "A01",
+   "case_no": "2025타경12345",
+   "deposit": 84000000,
+   "deposit_note": "최저매각가격의 10%",
+   "dong": "역삼동",
+   "gu": "강남구",
+   "kind": "아파트",
+   "maegak_date": "2026-10-15",
+   "min_price": 840000000,
+   "name": "역삼동 아파트 경매",
+   "official_price": 1200000000,
+   "times_failed": 1
+  },
+  {
+   "address": "서울 송파구 잠실동 55-6",
+   "auction_id": "A02",
+   "case_no": "2025타경67890",
+   "deposit": 36000000,
+   "deposit_note": "최저매각가격의 10%",
+   "dong": "잠실동",
+   "gu": "송파구",
+   "kind": "오피스텔",
+   "maegak_date": "2026-09-30",
+   "min_price": 360000000,
+   "name": "잠실동 오피스텔 경매",
+   "official_price": 450000000,
+   "times_failed": 1
+  },
+  {
+   "address": "서울 마포구 합정동 77-8",
+   "auction_id": "A03",
+   "case_no": "2024타경11113",
+   "deposit": 24320000,
+   "deposit_note": "최저매각가격의 10%",
+   "dong": "합정동",
+   "gu": "마포구",
+   "kind": "다세대",
+   "maegak_date": "2026-10-20",
+   "min_price": 243200000,
+   "name": "합정동 다세대 경매",
+   "official_price": 380000000,
+   "times_failed": 2
+  }
+ ],
+ "note": "실습용 목 데이터다. 금액·기일·단계는 일관되게 지어낸 값이며, 파이프라인은 이 DB에 있는 값으로만 답해야 한다.",
+ "prices": [
+  {
+   "area_m2": 84,
+   "date": "2026-07",
+   "deposit_avg": null,
+   "dong": "역삼동",
+   "gu": "강남구",
+   "jeonse": 1100000000,
+   "name": "래미안",
+   "price_id": "R01",
+   "trade_price": 2150000000
+  },
+  {
+   "area_m2": 59,
+   "date": "2026-06",
+   "deposit_avg": null,
+   "dong": "잠실동",
+   "gu": "송파구",
+   "jeonse": null,
+   "name": "트리지움",
+   "price_id": "R02",
+   "trade_price": 1480000000
+  },
+  {
+   "area_m2": 84,
+   "date": "2026-07",
+   "deposit_avg": null,
+   "dong": "합정동",
+   "gu": "마포구",
+   "jeonse": 950000000,
+   "name": "합정자이",
+   "price_id": "R03",
+   "trade_price": 1320000000
+  }
+ ],
+ "redevelop": [
+  {
+   "address": "서울 강남구 개포동",
+   "dong": "개포동",
+   "expected_completion": "2028-12",
+   "gu": "강남구",
+   "name": "개포주공1단지",
+   "redev_id": "D01",
+   "stage": "관리처분인가",
+   "type": "재건축"
+  },
+  {
+   "address": "서울 동작구 흑석동",
+   "dong": "흑석동",
+   "expected_completion": null,
+   "gu": "동작구",
+   "name": "흑석9구역",
+   "redev_id": "D02",
+   "stage": "사업시행인가",
+   "type": "재개발"
+  }
+ ],
+ "regulations": [
+  {
+   "area": "역삼동",
+   "far": 200,
+   "floor_note": "제2종일반주거지역 기준",
+   "gu": "강남구",
+   "includes_district_plan": true,
+   "is_permit_zone": false,
+   "land_tx_note": "토지거래허가구역이 아닙니다.",
+   "lcr": 60,
+   "reg_id": "G01",
+   "zone": "제2종일반주거지역"
+  },
+  {
+   "area": "잠실동",
+   "far": 250,
+   "floor_note": "제3종일반주거지역 기준",
+   "gu": "송파구",
+   "includes_district_plan": true,
+   "is_permit_zone": false,
+   "land_tx_note": "토지거래허가구역이 아닙니다.",
+   "lcr": 50,
+   "reg_id": "G02",
+   "zone": "제3종일반주거지역"
+  },
+  {
+   "reg_id": "G03",
+   "area": "합정동",
+   "gu": "마포구",
+   "zone": "제2종일반주거지역",
+   "far": 200,
+   "lcr": 60,
+   "is_permit_zone": false,
+   "land_tx_note": "토지거래허가구역이 아닙니다.",
+   "includes_district_plan": false
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+# 키 파일은 절대 커밋 금지
+.env
+.env.*
+!.env.example
+keys.env
+*.key
+*.pem

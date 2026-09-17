@@ -1,0 +1,19 @@
+qid,question,route,split
+F1,2025타경67890 감정가 얼마야,AUCTION,fewshot
+F2,래미안 84㎡ 전세 얼마야,PRICE,fewshot
+F3,흑석9구역 지금 무슨 단계야,REDEVELOP,fewshot
+F4,잠실동 용적률 몇 %야,REGULATION,fewshot
+F5,합정동 실거래 알려줘,PRICE,fewshot
+F6,합정동 다세대 경매 보증금 얼마야,AUCTION,fewshot
+E1,2025타경12345 최저매각가격 얼마야,AUCTION,eval
+E2,2025타경99999 진행 상황 알려줘,AUCTION,eval
+E3,2025타경12345 명도 어렵지 않아,AUCTION,eval
+E4,역삼동 래미안 84㎡ 실거래가 알려줘,PRICE,eval
+E5,잠실동 시세 알려줘,PRICE,eval
+E6,개포주공1단지 재건축 어디까지 진행됐어,REDEVELOP,eval
+E7,둔촌주공 재건축 진행 상황 알려줘,REDEVELOP,eval
+E8,역삼동 123-4 용도지역이랑 용적률 알려줘,REGULATION,eval
+E9,역삼동 맛집 추천해줘,OUT_OF_SCOPE,eval
+E10,합정동 건폐율 몇 %야,REGULATION,eval
+E11,응암동 실거래 알려줘,PRICE,eval
+E12,화곡동 시세 알려줘,PRICE,eval
