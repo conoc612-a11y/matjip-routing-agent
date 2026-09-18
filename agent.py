@@ -248,18 +248,14 @@ def node_guard(state):
         if state["action"] == "ESCALATE" and "answer" not in state:
             msg = escalate_to_agent("분류확신도미달", {"q": state["question"]})["message"]
         return {"guardrail_ok": True, **({"answer": msg} if msg else {})}
-    ok = guardrail(state["answer"], state.get("results"))["ok"]
-    return {"guardrail_ok": ok, "action": state["action"] if ok else "ESCALATE"}
+    if not guardrail(state["answer"], state.get("results"))["ok"]:
+        return {"guardrail_ok": False, "action": "ESCALATE",
+                "answer": escalate_to_agent("가드레일위반", {"q": state["question"]})["message"]}
+    return {"guardrail_ok": True, "action": state["action"]}
 
 
 def after_route(state):
     return "answer" if state["action"] == "HANDLE" else "guard"
-
-
-def after_guard(state):
-    if state["action"] == "ESCALATE" and "answer" not in state:
-        return "guard"
-    return END
 
 
 def build_agent():
@@ -270,7 +266,7 @@ def build_agent():
     g.add_edge(START, "route")
     g.add_conditional_edges("route", after_route, {"answer": "answer", "guard": "guard"})
     g.add_edge("answer", "guard")
-    g.add_conditional_edges("guard", after_guard, {"guard": "guard", END: END})
+    g.add_edge("guard", END)
     return g.compile()
 
 
